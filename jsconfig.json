@@ -3,7 +3,6 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
     "jsx": "react",
     "esModuleInterop": true,
     "sourceMap": true,
@@ -15,10 +14,5 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "mock/**/*",
-    "src/**/*",
-    "config/**/*",
-    ".umirc.js"
-  ]
+  "include": ["mock/**/*", "src/**/*", "config/**/*", ".umirc.js"]
 }
