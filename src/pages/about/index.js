@@ -1,4 +1,4 @@
-import CompAbout from "./components/CompAbout";
+import CompAbout from './components/CompAbout';
 
 const About = () => {
   return (

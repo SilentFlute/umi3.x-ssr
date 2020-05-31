@@ -1,5 +1,5 @@
-import { Link } from "umi";
-import PropTypes from "prop-types";
+import { Link } from 'umi';
+import PropTypes from 'prop-types';
 
 const BasicLayout = ({ children }) => {
   return (
