@@ -3,19 +3,14 @@ import styles from './index.less';
 import CompSrc from '@/components/CompSrc';
 
 class Index extends PureComponent {
-
   static async getInitialProps(ctx) {
     console.log('ctx', ctx);
 
     return {
       data: {
-        content: 'hello world'
-      }
-    }
-  }
-
-  componentDidMount() {
-    console.log('componentDidMount');
+        content: 'hello world',
+      },
+    };
   }
 
   render() {
@@ -27,7 +22,7 @@ class Index extends PureComponent {
         <h1 className={styles.title}>{content}</h1>
         <CompSrc />
       </div>
-    )
+    );
   }
 }
 
