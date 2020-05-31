@@ -1,7 +1,5 @@
 const CompSrc = () => {
-  return (
-    <div>CompSrc</div>
-  )
-}
+  return <div>CompSrc</div>;
+};
 
 export default CompSrc;

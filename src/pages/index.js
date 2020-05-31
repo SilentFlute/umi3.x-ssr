@@ -15,7 +15,7 @@ class Index extends PureComponent {
   }
 
   static propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object
   };
 
   render() {

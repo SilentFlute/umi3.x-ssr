@@ -1,4 +1,4 @@
-import CompAbout from './components/CompAbout';
+import CompAbout from "./components/CompAbout";
 
 const About = () => {
   return (
@@ -6,8 +6,7 @@ const About = () => {
       <div>About</div>
       <CompAbout />
     </div>
-
-  )
-}
+  );
+};
 
 export default About;

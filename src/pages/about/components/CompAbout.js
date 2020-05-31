@@ -1,7 +1,5 @@
 const CompAbout = () => {
-  return (
-    <div>Comp About</div>
-  )
-}
+  return <div>Comp About</div>;
+};
 
 export default CompAbout;
