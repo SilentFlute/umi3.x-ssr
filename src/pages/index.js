@@ -17,6 +17,8 @@ class Index extends PureComponent {
     const { data } = this.props;
     const { content } = data || {};
 
+    const { domain } = env;
+    console.log(domain);
     return (
       <div>
         <h1 className={styles.title}>{content}</h1>

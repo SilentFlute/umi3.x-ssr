@@ -17,7 +17,7 @@ export default defineConfig({
   },
   autoprefixer: false,
   define: {
-    'process.env': {
+    env: {
       domain: `${process.env.domain}`,
     },
   },
