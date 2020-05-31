@@ -8,15 +8,13 @@ export default defineConfig({
     forceInitial: false,
     devServerRender: true,
     mode: 'stream',
-    staticMarkup: false
+    staticMarkup: false,
   },
   targets: {
-    ie: 11
+    ie: 9,
   },
   autoprefixer: false,
   polyfill: {
-    imports: [
-      'core-js',
-    ]
-  }
+    imports: ['core-js'],
+  },
 });
