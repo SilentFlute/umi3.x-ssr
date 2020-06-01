@@ -1,5 +1,6 @@
 import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'umi';
 import styles from './index.less';
 import CompSrc from '@/components/CompSrc';
 
@@ -8,6 +9,7 @@ const wait = time => (
     setTimeout(
       () => {
         res({
+          title: 'a title',
           content: 'hello world'
         });
       },
@@ -37,11 +39,14 @@ class Index extends PureComponent {
 
   render() {
     const { data } = this.props;
-    const { content } = data || {};
+    const { content, title } = data || {};
     console.log('render test');
 
     return (
       <div>
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
         <h1 className={styles.title}>{content}</h1>
         <CompSrc />
       </div>
