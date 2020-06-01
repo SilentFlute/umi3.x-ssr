@@ -31,9 +31,14 @@ class Index extends PureComponent {
     data: PropTypes.object
   };
 
+  componentDidMount() {
+    console.log('componentDidMount test');
+  }
+
   render() {
     const { data } = this.props;
     const { content } = data || {};
+    console.log('render test');
 
     return (
       <div>
