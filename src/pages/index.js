@@ -18,7 +18,7 @@ const wait = time => (
 
 class Index extends PureComponent {
   static async getInitialProps(ctx) {
-    console.log('ctx', ctx);
+    // console.log('ctx', ctx);
 
     const data = await wait(3000);
 
