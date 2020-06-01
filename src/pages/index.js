@@ -10,7 +10,9 @@ const wait = time => (
       () => {
         res({
           title: 'a title',
-          content: 'hello world'
+          content: 'hello world',
+          k: 'a keyword',
+          d: 'a description'
         });
       },
       time
@@ -39,13 +41,15 @@ class Index extends PureComponent {
 
   render() {
     const { data } = this.props;
-    const { content, title } = data || {};
+    const { content, title, k, d } = data || {};
     console.log('render test');
 
     return (
       <div>
         <Helmet>
           <title>{title}</title>
+          <meta name="keywords" content={k} />
+          <meta name="description" content={d} />
         </Helmet>
         <h1 className={styles.title}>{content}</h1>
         <CompSrc />
