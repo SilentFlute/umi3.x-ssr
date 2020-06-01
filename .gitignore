@@ -17,3 +17,5 @@
 /src/.umi-production
 /src/.umi-test
 /.env.local
+*.md
+!README.md
