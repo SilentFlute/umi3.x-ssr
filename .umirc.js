@@ -20,5 +20,6 @@ export default defineConfig({
     "process.env": {
       domain: `${process.env.domain}`
     }
-  }
+  },
+  publicPath: '/'
 });
