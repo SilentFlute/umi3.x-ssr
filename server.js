@@ -42,6 +42,7 @@ app.use(async (req, res) => {
   // } else {
   //   res.send(res);
   // }
+  res.send(html);
 });
 
 app.listen(port, err => {
