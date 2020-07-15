@@ -1,6 +1,6 @@
 import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'umi';
+import { Helmet, history } from 'umi';
 import styles from './index.less';
 import CompSrc from '@/components/CompSrc';
 
@@ -19,6 +19,29 @@ const wait = time => (
     );
   })
 );
+
+const cateData = [
+  {
+    id: 1,
+    name: 1
+  },
+  {
+    id: 2,
+    name: 2
+  },
+  {
+    id: 3,
+    name: 3
+  },
+  {
+    id: 4,
+    name: 4
+  },
+  {
+    id: 5,
+    name: 5
+  }
+];
 
 class Index extends PureComponent {
   static async getInitialProps(ctx) {
@@ -40,9 +63,11 @@ class Index extends PureComponent {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, location } = this.props;
     const { content, title, k, d } = data || {};
-    console.log('render test');
+    const { query } = location;
+    const { id } = query;
+    console.log('index render');
 
     return (
       <div>
@@ -52,6 +77,36 @@ class Index extends PureComponent {
           <meta name="description" content={d} />
         </Helmet>
         <h1 className={styles.title}>{content}</h1>
+        <div>页面查询字符串变更:</div>
+        <div
+          style={{
+            whiteSpace: 'nowrap',
+            overflow: 'auto'
+          }}
+        >
+          {
+            cateData.map(item => (
+              <div
+                style={{
+                  display: 'inline-block',
+                  width: '30%',
+                  color: id == item.id ? '#f00' : 'inherit'
+                }}
+                key={item.id}
+                onClick={
+                  () => {
+                    history.push({
+                      pathname: '/',
+                      query: {
+                        id: item.id
+                      }
+                    });
+                  }
+                }
+              >{item.name}</div>
+            ))
+          }
+        </div>
         <CompSrc />
       </div>
     );
